@@ -1,0 +1,501 @@
+
+.aside-menu {
+    font-size: 16px;
+}
+
+.aside-menu ul {
+    
+}
+
+.aside-menu ul li {
+   margin: 5px 0;
+   padding-left: 10px;
+   transition: background-color .1s ease;
+}
+
+.aside-menu ul li.active {
+    font-weight: bold;
+    background: #77B0F1;
+}
+
+.aside-menu ul li img {
+    margin: 2px 10px 2px 2px;
+}
+
+.aside-menu ul li .arrow {
+    float: right;
+}
+
+.aside-menu ul li:hover {
+    background: #77B0F1;
+}
+
+
+.menu-item {
+    display: none;
+}
+
+
+
+/****** Profile Section ***/
+.profile-section {
+    
+}
+
+.profile-info-form {
+    margin: 20px;
+}
+
+.profile-info-form {
+}
+
+.profile-info-form fieldset {
+    margin: 5px;
+    border: 2px dotted #eeeeee;
+}
+
+.profile-info-form legend {
+    padding: 3px 5px;
+    font-weight: bold;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+}
+
+.profile-info-form input[type=text], 
+.profile-info-form input[type=email], 
+.profile-info-form input[type=file],
+.profile-info-form textarea {
+    min-width: 300px;
+    padding: 3px 5px;
+    margin: 5px;
+    border: 2px solid #eeeeee;
+}
+
+.profile-info-form input[type=text]:focus, 
+.profile-info-form input[type=email]:focus,
+.profile-info-form select:focus {
+     border: 2px dashed #77B0F1;
+}
+
+.profile-info-form .select-div {
+    margin: 5px;
+}
+
+.profile-info-form select {
+    padding: 2px 5px;
+    margin: 2px 0;
+    border: 1px solid #eeeeee;
+}
+
+.profile-info-form textarea {
+    height: 50px;
+    max-height: 150px;
+    width: 300px;
+    max-width: 360px;
+}
+
+.profile-info-form .button {
+    margin: 3px 5px;
+}
+
+
+
+
+/****** Friends Section ***/
+.friends-section {
+    padding: 2px;
+}
+
+.friends-section .friends-list {
+    min-height: 300px;
+    max-height: 500px;
+    padding: 5px;
+    margin: 0 10px 10px 10px;
+    overflow-y: auto;
+    border: 3px solid #eeeeee;
+}
+
+.friends-section .results-section {
+    padding: 5px 20px;
+    margin: 2px 10px;
+    background: #eeeeee;
+}
+
+.friends-section .results-section p {
+    font-size: 16px;
+    margin: 5px 10px;
+}
+
+.friends-section .friends-search-form-section {
+    padding: 5px;
+    margin: 5px 10px;
+    border: 1px solid #eeeeee;
+}
+
+.friends-section .friends-search-form input[type=text] {
+    width: 300px;
+    padding: 5px;
+    margin: 10px;
+    border: 3px solid #eeeeee;
+}
+
+.friends-section .friends-search-form input[type=text]:focus {
+    border: 3px dashed #eeeeee; 
+}
+
+.friends-section .friends-search-form-section .show-all-btn {
+    display: inline-block;
+}
+
+.friends-section .friend {
+    padding: 3px;
+    margin: 10px;
+    font-size: 14px;
+    border: 1px solid #eeeeee;
+}
+
+.friends-section .friend .name {
+    text-transform: capitalize;
+}
+
+.friends-section .friend .button {
+    padding: 2px 3px;
+    margin: 5px 0 0 5px;
+    font-size: 12px;
+}
+
+.friends-section .friend figure {
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin: 0 20px 0 0;
+}
+
+.friends-section .friend figure img {
+    width: 100%;
+    height: 100%;
+} 
+
+
+
+
+/** Photos section  **/
+.photos-section {
+    
+}
+
+.photos-section .photos-status-section {
+    padding: 5px 10px;
+    margin: 10px 5px;
+    border: 1px solid #eeeeee;
+}
+
+.photos-section .action-buttons {
+    padding: 5px;
+    margin: 10px 5px;
+    border: 1px solid #eeeeee;
+}
+
+.photos-section .albums-section {
+    padding: 5px;
+    margin: 10px 0;
+    max-height: 500px;
+    overflow-y: auto;
+}
+    
+.photos-section .albums-section .album {
+    float: left;
+    padding: 3px;
+    margin: 3px 5px 5px 0;
+    width: 180px;
+    height: 135px;
+    border: 1px solid #eeeeee;
+}
+
+.photos-section .albums-section .album h3 {
+    font-size: 16px;
+    padding: 2px 2px 2px 5px;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.photos-section .albums-section .album .close {
+    float: right;
+    width: 15px;
+    height: 10px;
+    margin: 2px 0 5px 0;
+    cursor: pointer;
+}
+
+.photos-section .albums-section .album img {
+    width: 172px;
+    height: 100px;
+    margin: 2px 0;
+}
+
+.widgets-section {
+    
+}
+
+
+.settings-section {
+    
+}
+
+
+
+
+
+
+.album-lightbox {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    background: rgba(0,0,0,0.38);
+    z-index: 300;
+}
+
+
+.album-lightbox .container {
+    display: block;
+    position: fixed;
+    top: 40px;
+    left: 16%;
+    width: 670px;
+    height: 470px;
+    color: #000000;
+    background: #ffffff;
+    border: 5px solid #eeeeee;
+    box-shadow: 0 0 1px 3px rgba(0,0,0,0.10);
+}
+
+.album-lightbox .container .album-header {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    padding: 2px;
+    margin: 0 0 2px 0;
+}
+
+.album-lightbox .container .album-header .close {
+    float: right;
+    color: #ffffff;
+    padding: 2px;
+    margin: 0 2px;
+    background: inherit;
+    border: 0;
+}
+
+.album-lightbox .container .album-header .album-notification {
+    display: none;
+    position: absolute;
+    top: 4px;
+    left: 255px;
+    width: 400px;
+    padding: 2px; 
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    background: #FDF5C6;
+    border: 1px solid #FDF5C6;
+    border-radius: 2px;
+    box-shadow: 0 0 1px 3px rgba(0,0,0,0.10);
+    z-index: 400;
+} 
+
+
+
+.album-lightbox .container .photos-wrap {
+    float: left;
+    width: 405px;
+    height: 320px;
+    margin: 2px 0 0 0;
+    border: 1px solid #eeeeee;
+}
+
+.album-lightbox .container .preview-div {
+    width: 100%;
+    height: 230px;
+    border: 1px solid #eeeeee;
+    overflow-y: auto;
+}
+
+.album-lightbox .container .preview-div img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.album-lightbox .container .photos-div {
+    width: 100%;
+    height: 86px;
+    padding: 2px;
+    margin: 2px 0 0 0;
+    border: 1px solid #eeeeee;
+    overflow-y: auto;
+}
+
+.album-lightbox .container .photos-div img {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ffffff;
+    margin: 2px 1px;
+}
+
+.album-lightbox .container .photos-div img.current {
+    border: 2px solid #77B0F1 !important;
+}
+
+     
+.album-lightbox .container .comments-div {
+    width: 250px;
+    height: 300px; 
+    float: left;
+    margin: 0 5px 0 0;
+    font-size: 12px;
+    overflow-y: auto; 
+}
+
+.album-lightbox .container .comments-div .note {
+    margin: 30px auto;
+    font-size: 14px;
+    text-align: center;
+}
+
+.album-lightbox .container .comments-div .comment {
+    width: auto;
+    padding: 2px;
+    margin: 2px 3px 3px 3px;
+    border: 1px solid #eeeeee;
+}
+
+.album-lightbox .container .comments-div .comment img {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin: 3px 3px 2px 2px;
+}
+
+.album-lightbox .container .comments-div .comment p {
+    margin: 0 0 0 48px;
+}
+
+.album-lightbox .container .comments-div .comment .name {
+    color: #6170FA;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+.album-lightbox .container .comments-div .comment p img {
+    width: 15px;
+    height: 15px;
+    margin: 0 1px -2px 1px;
+}   
+
+
+.album-lightbox .container .upload-panel {
+    float: left;
+    width: 660px;
+    height: 100px;
+    margin: 5px 0 0 0;
+    border: 1px solid green;  
+}
+
+.album-lightbox .container .upload-panel form {
+    border: 1px dotted #eeeeee;
+}
+
+.album-lightbox .container .upload-panel form .button {
+    display: block;
+    padding: 3px;
+    font-size: 12px;   
+}
+
+.album-lightbox .container .upload-form {
+    display: block;
+    padding: 5px;
+    border: 1px dotted #eeeeee;
+}
+
+.album-lightbox .container .upload-form input[type=file] {
+    display: none;
+}
+
+.album-lightbox .container .upload-panel .settings-div {
+    float: left;
+    width: 248px;
+    height: 100%;
+    padding: 3px;
+    margin: 0 7px 0 0;
+    border: 1px dotted #eeeeee;
+}
+
+.album-lightbox .container .upload-panel .form-div {
+    float: left;
+    width: 403px;
+    height: 100%;
+    padding: 3px;
+    border: 1px solid #eeeeee;
+}
+
+.album-lightbox .container .upload-panel .form-div form {
+    width: 100%;
+    height: 40px;
+    border: 1px dotted #eeeeee;
+}
+
+.album-lightbox .container .upload-panel .form-div form .button {
+    float: left;
+    margin: 3px 20px 3px 2px;
+}
+
+.album-lightbox .container .upload-panel .form-div .form-status {
+    float: left;
+    width: 200px;
+    height: 100%;
+    padding: 5px;
+    margin: 0 20px 0 0;
+    font-size: 14px;
+    text-align: center;
+    background: #eeeeee;
+}
+
+.album-lightbox .container .upload-panel .images-wrap {
+    width: 100%;
+    height: 52px;
+    border: 1px dotted #eeeeee;
+} 
+
+.album-lightbox .container .upload-panel .image-div {
+    width: 50px;
+    height: 50px;
+    margin: 0 5px 0 0;
+    border: 1px dotted red;
+    float: left;
+    background: #eeeeee;
+}
+
+.album-lightbox .container .upload-panel .image-div img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+  
+                   
+
+

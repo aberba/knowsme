@@ -1,0 +1,693 @@
+
+@import url("normalize.css");
+
+/* --- general styles ---  */
+* {
+	padding: 0px;
+	margin: 0px;
+
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+    background: #98E9FA;
+    font-size: 17px;
+    font-family: helvetica;
+    background: url("../img/template/background.png") repeat lightblue ;
+}
+
+a {
+    text-decoration: none;
+    color: #6170FA;
+}
+
+.clearfix:after {
+    content: " ";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0; 
+}
+
+.clearfix {
+    display: block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.button {
+    padding: 5px 5px;
+    color: #ffffff;
+    border: 1px solid #448CD3;
+    box-shadow: 0 0 .5px .5px rgba(0,0,0,0.15);
+    outline: none;
+    
+    background:  -moz-linear-gradient(top, #77B0F1 0%, #448CD3 100%);
+    background:  -o-linear-gradient(top, #77B0F1 0%, #448CD3 100%);
+    background:  -webkit-linear-gradient(top, #77B0F1 0%, #448CD3 100%);
+    background:  -ms-linear-gradient(top, #77B0F1 0%, #448CD3 100%);
+    background:  -khtml-linear-gradient(top, #77B0F1 0%, #448CD3 100%);
+    background:  linear-gradient(top, #77B0F1 0%, #448CD3 100%);  
+}
+
+.button img {
+    float: left;
+    height: 10px !important;
+    width: 10px !important;
+    margin: 2px 5px 2px 2px;
+}
+
+
+.error {
+    color: #FC7777;
+    font-size: 14px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 0 10px 0;
+}
+
+.valid {
+    border: 2px dashed #82E466 !important;
+    box-shadow: 0 0 1px 2px rgba(0,0,0,0.13);
+}
+
+.invalid {
+    border: 2px dashed #FC7777 !important;
+    box-shadow: 0 0 1px 2px rgba(0,0,0,0.13);
+}
+
+.bg-blue {
+    color: #ffffff;
+    background:  -moz-linear-gradient(top, #77B0F1 0%, #448CD3 100%);
+    background:  -o-linear-gradient(top, #77B0F1 0%, #448CD3 100%);
+    background:  -webkit-linear-gradient(top, #77B0F1 0%, #448CD3 100%);
+    background:  -ms-linear-gradient(top, #77B0F1 0%, #448CD3 100%);
+    background:  -khtml-linear-gradient(top, #77B0F1 0%, #448CD3 100%);
+    background:  linear-gradient(top, #77B0F1 0%, #448CD3 100%);  
+}
+
+.name {
+    color: blue;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.date {
+    font-weight: bold;
+}
+
+#wrapper {
+    position: relative !important;
+	width: 700px;
+	height: auto;
+	padding: 60px 0 0 0;
+	margin: 0px auto;
+    z-index: 10;
+    border: 1px solid #000000;
+}
+
+/*----- Chat section ------*/
+
+#chat-section {
+    position: fixed;
+    bottom: 0;
+    font-size: 12px;
+    z-index: 20;
+}
+
+#chat-section ul li {
+    list-style: none;
+    cursor: pointer;
+}
+
+#chat-section #chat-button {
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0 1px 3px rgba(0,0,0,0.10);
+    cursor: pointer;
+}
+
+#chat-section #chat-button p {
+    float: right;
+    margin: 0 5px 0 2px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#chat-section #chat-button p span {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 0 0 35px;
+}
+
+#chat-section #chat-button img {
+    float: left;
+    margin: 2px 0 2px 10px;
+}
+
+#chat-section #chat-wrapper {
+    display: none;
+    background: #ffffff;
+    box-shadow: 0 0 1px 3px rgba(0,0,0,0.10);
+    border-radius: 5px 5px 0 0;
+}
+
+#chat-section #chat-header {
+    padding: 3px;
+    color: #ffffff;
+    border-radius: 5px 5px 0 0;
+}
+
+#chat-section #chat-header ul {
+    float: right;
+}
+
+#chat-section #chat-header ul li {
+    display: inline-block;
+    padding: 0;
+    margin: 0 3px;
+}
+
+#chat-section #online-friends {
+    padding: 5px;
+    width: 140px;
+    height: 200px;
+    float: left;
+    border: 1px solid #eeeeee; 
+    overflow-y: auto;
+}
+
+#chat-section #online-friends ul li {
+    position: relative;
+    margin: 2px 0 2px 0;
+    padding-top: 3px;
+    text-transform: capitalize;
+    border-bottom: 1px dotted #eeeeee;
+}
+
+#chat-section #online-friends ul li.current:after {
+    content: "";
+    position: absolute;
+    margin: 1px -4px 1px 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 6px solid;
+    border-color: transparent  transparent transparent #82E466;
+}
+
+#chat-section #chatbox-wrapper {
+    display: none;
+    height: 200px;
+    width: 170px;
+    float: left;
+    margin: 0 0 0 2px;
+    border: 1px solid #eeeeee;
+}
+
+#chat-section #chatbox-wrapper form {
+    border: 1px solid #eeeeee;
+}
+
+#chat-section #chatbox-wrapper form input[type=text] {
+    height: 30px;
+    width: 100%;
+    padding: 2px;
+    border: 2px solid #eeeeee;
+}
+
+#chat-section #chatbox-wrapper form input[type=text]:focus {
+    border: 2px dashed #77B0F1;
+}
+
+#chat-section #chatbox-wrapper .message-box {
+    position: relative;
+    height: 140px;
+    padding: 3px;
+    border: 1px solid #eeeeee;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-wrap: break-word;
+}
+
+#chat-section #chatbox-wrapper .chatbox .message-box p {
+    display: block;
+    width: auto;
+    min-width: 74px;
+    padding: 3px 5px;
+    margin: 5px 5px;
+    border-radius: 3px;
+    box-shadow: 0 0 1px rgba(0,0,0,0.10);
+}
+
+#chat-section #chatbox-wrapper .chatbox .message-box p img {
+    width: 15px;
+    margin-bottom: -2px;
+}
+
+#chat-section #chatbox-wrapper .chatbox .message-box p.other {
+    float: left;
+    background: #7CDAEA;
+}
+
+#chat-section #chatbox-wrapper .chatbox .message-box p.other:before {
+    content: "";
+    position: absolute;
+    margin: 1px 0 1px -16px;
+    width: 0;
+    height: 0;
+    border: 6px solid;
+    border-color: transparent #7CDAEA transparent transparent;
+}
+
+#chat-section #chatbox-wrapper .chatbox .message-box p.me {
+    float: right;
+    background: #BFCDDB;
+}
+
+#chat-section #chatbox-wrapper .chatbox .message-box p.me:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 0;
+    margin: 1px -4px 1px 0;
+    border: 6px solid;
+    border-color: transparent  transparent transparent #BFCDDB;
+}
+
+#chat-section #chatbox-wrapper .chatbox ul {
+    padding: 0 2px;
+    margin: 2px 5px;
+    border: 1px solid #eeeeee;
+    border-radius: 3px;
+}
+
+#chat-section #chatbox-wrapper .chatbox ul li {
+    display: inline-block;
+    margin: 0 10px 0 2px;
+}
+
+
+/* --- header styles ---  */
+#header {
+	display: block;
+	position: fixed;
+	width: 100%;
+	padding: 5px;
+	margin: 0 0 10px 0;
+	margin-top: -1px !important;
+	height: 50px;
+	color: #ffffff;
+	z-index: 30;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+#header #header_wrapper {
+	width: 700px;
+	margin: 0px auto;
+}
+
+#header #logo {
+    display: block;
+	width: 100px;
+    height: 30px;
+	float: left;
+	margin: 10px 5px;
+}
+
+#header #logo img {
+	width: 100%;
+    height: 100%;
+}
+
+
+/* -- navigation -- */
+#header #navigation {
+	float: left;
+    height: 28px;
+    margin: 10px 25px 10px 3px;
+}
+
+#header #navigation ul {
+	list-style: none;
+}
+#header #navigation ul li {
+	display: inline-block;
+    margin: 5px 10px;
+} 
+
+#header #navigation ul li img {
+}
+
+
+/* --- search form ---*/
+#header #search_div #search {
+	display: block;
+	float: left;
+	width: 320px;
+    margin: 10px 2px 10px 0;
+}
+
+#header #search_div #search input[type=text] {
+    width: 100%;
+	padding: 3px 10px;
+    font-size: 16px;
+    color: #000000;
+	border: 2px solid #ffffff;
+	outline: none;
+    background: #ffffff url("../img/icons/search-20.png") no-repeat 350px 4px;
+    outline: none;
+}
+
+#header #search_div #search input[type=text]:focus {
+    border: 2px dashed #eeeeee;
+}
+
+#header #options {
+    float: left;
+    position: relative;
+    margin: 15px 10px;
+    cursor: pointer;
+}
+
+#header #options img {
+    padding: 2px;
+}
+
+#header #options #dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 1px;
+    width: 150px;
+    background: #ffffff;
+    color: #000000;
+    font-size: 14px;
+    padding: 3px 0;
+    border: 3px solid #eeeeee;
+    z-index: 250;
+}
+
+#header #options #dropdown-menu ul li {
+    list-style: none;
+    padding: 5px 10px;
+    border-bottom: 1px dotted #eeeeee;
+}
+
+#header #options #dropdown-menu ul li a {
+    color: #000000;
+}
+
+#header #options #dropdown-menu ul li:last-child {
+    border-bottom: 0;
+}
+
+#header #options #dropdown-menu ul li:hover a {
+    color: #ffffff;
+}
+
+
+
+
+/********  Message Notification  *********/
+#header #notification-section {
+    float: left;
+    position: relative;
+    width: 1px;
+}
+
+#header #notification-section #notification {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: -10px;
+    width: 420px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    background: #FDF5C6;
+    border: 1px solid #FDF5C6;
+    border-radius: 3px;
+    box-shadow: 0 0 1px 3px rgba(0,0,0,0.10);
+    z-index: 400;
+}
+
+
+
+/* --- Ajax Loader --*/
+#header #loader-section {
+    float: left;
+    position: relative;
+    width: 1px;
+}
+
+#header #loader-section #loader {
+    display: none;
+    position: absolute;
+    top: 55px;
+    right: 25px;
+    padding: 3px;
+    background: #ffffff;
+    border: 2px solid #eeeeee;
+    z-index: 350;
+}
+
+
+/* --- login form --*/
+#header #login_form {
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 500px;
+	width: auto;
+	padding: 0px;
+	margin: 0px;
+}
+
+#header #login_form input[type=email], header #login_form input[type=password] {
+    width: 150px;
+	padding: 3px;
+	margin: 10px 5px;
+	color: #000;
+	background-color: #ffffee;
+	border: 1px solid #ffffff; 
+
+	-moz-border-radius: 0px;
+    -webkitborder-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 0px;
+
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2), inset 0 -1px 3px #f6f4ee;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2), inset 0 -1px 3px #f6f4ee;
+    -o-box-shadow: 0 1px 2px rgba(0,0,0,.2), inset 0 -1px 3px #f6f4ee;
+    -ms-box-shadow: 0 1px 2px rgba(0,0,0,.2), inset 0 -1px 3px #f6f4ee;
+    box-shadow: 0 1px 2px rgba(0,0,0,.2), inset 0 -1px 3px #f6f4ee;
+}
+#header #login_form input[type=email] {
+	width: 200px;
+}
+
+#header #login_form input[type=submit] {
+	padding: 3px 10px;
+	margin: 2px;
+	color: #ffffff;
+	text-align: center;
+	font-weight: bold;
+	font-family: helvetica, sans-serif, arial;
+	background-color: #600060;
+	border: 1px solid #600060;
+
+	-moz-border-radius: 0px;
+    -webkitborder-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 0px;
+
+
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2), inset 0 -1px 3px #f6f4ee;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2), inset 0 -1px 3px #f6f4ee;
+    -o-box-shadow: 0 1px 2px rgba(0,0,0,.2), inset 0 -1px 3px #f6f4ee;
+    -ms-box-shadow: 0 1px 2px rgba(0,0,0,.2), inset 0 -1px 3px #f6f4ee;
+    box-shadow: 0 1px 2px rgba(0,0,0,.2), inset 0 -1px 3px #f6f4ee;
+}
+
+/* -- wrapper for the page ---  */
+
+
+#aside {
+	float: left;
+	display: block;
+	width: 240px;
+	padding: 0;
+	margin: 10px;
+	font-size: 12px;
+    
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+    
+}
+
+#aside ul li {
+    list-style: none;
+}
+
+#aside #aside-box {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    margin: 0 0 20px 0;
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+#content {
+    position: relative;
+	float: left;
+	width: 420px;
+	padding: 0;
+	margin: 10px 0 10px 10px;
+	margin-left: 0;
+}
+
+
+#content #content-box {
+    position: relative;
+    display: block;
+    width: 100%;   
+}
+
+#content #content-box .content-section {
+    padding: 10px 0 1px 10px;
+    margin: 0 0 10px 0;
+    background: #ffffff;
+}
+
+#content #content-box .content-section:first-child {
+    -moz-border-to-left-radius: 10px;
+    -webkit-border-to-left-radius: 10px;
+    -o-border-to-left-radius: 10px;
+    -ms-border-to-left-radius: 10px;
+    border-top-left-radius: 10px;
+    
+    -moz-border-to-right-radius: 10px;
+    -webkit-border-to-right-radius: 10px;
+    -o-border-to-right-radius: 10px;
+    -ms-border-to-right-radius: 10px;
+    border-top-right-radius: 10px;  
+}
+
+#content #content-box .content-section:last-child {
+    text-align: center;
+    
+    -moz-border-bottom-left-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -o-border-bottom-left-radius: 10px;
+    -ms-border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 10px;  
+    
+    -moz-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -o-border-bottom-right-radius: 10px;
+    -ms-border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 10px;  
+}
+
+
+/* --- footer ---*/
+#footer {
+	display: block;
+    width: 1024px;
+	padding: 30px;
+	margin: 20px;
+	margin-bottom: 0px;
+	color: #ffffff;
+	font-size: 12px;
+	text-align: center;
+    
+    background:  -moz-linear-gradient(top, #77B0F1 0%, #448CD3 100%);
+    background:  -o-linear-gradient(top, #77B0F1 0%, #448CD3 100%);
+    background:  -webkit-linear-gradient(top, #77B0F1 0%, #448CD3 100%);
+    background:  -ms-linear-gradient(top, #77B0F1 0%, #448CD3 100%);
+    background:  -khtml-linear-gradient(top, #77B0F1 0%, #448CD3 100%);
+    background:  linear-gradient(top, #77B0F1 0%, #448CD3 100%);  
+	clear: both;
+}
+
+
+/* Site global styles for actions*/
+.notification  {
+    display: block;
+    position: fixed;
+    top: 200px;
+    left: 200px;
+    min-width: 200px;
+    max-width: 300px;
+    min-height: 100px;
+    background: #ffffff;
+    font-size: 12px;
+    box-shadow: 0 0 1px 4px rgba(0,0,0,0.1);
+    z-index: 100;
+    border-radius: 3px;
+}
+
+.notification .notification-header {
+    padding: 5px;
+    color: #ffffff;
+    text-align: center;
+    min-height: 20px;
+    background: #77B0F1;
+    border-radius: 3px 3px 0 0;
+}
+
+.notification .notification-header .close {
+    display: block;
+    float: right;
+    margin: 2px 5px;
+    color: #ffffff;
+    background: #77B0F1;
+    border: 0;
+}
+
+.notification .notification-header h3 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.notification .content {
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+

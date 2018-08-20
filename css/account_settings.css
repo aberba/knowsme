@@ -1,0 +1,25 @@
+@font-face {
+	font-family: "Averia Serif Libre Regular";
+	src: url('../fonts/AveriaSerifLibre-Regular.ttf') format("truetype");
+}
+@font-face {
+	font-family: "Averia Serif Libre Light";
+	src: url('../fonts/AveriaSerifLibre-Light.ttf') format("truetype");
+}
+@font-face {
+	font-family: "Ubuntu Mono Regular";
+	src: url('../fonts/UbuntuMono-Regular.ttf') format("truetype");
+}UbuntuMono-Regular
+
+#test * {
+	font-family: "Averia Serif Libre Regular";
+	font-size: 12px;
+}
+#test2 * {
+	font-family: "Ubuntu Mono Regular";
+	color: #600060;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: #fff;
+	padding: 20px;
+}

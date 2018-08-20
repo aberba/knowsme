@@ -1,0 +1,60 @@
+.form {
+    display: block;    
+}
+
+.form input[type=text], .form input[type=email], 
+.form input[type=password] {
+    padding: 5px 10px;
+    color: #000000;
+    font-size: 14px;
+    background-color: #ffffff;
+    border: 3px solid #ffffff;
+    border-radius: 0px;
+    outline: none;
+    transition: border-color 1s ease-out;
+}
+
+.form input[type=text]:focus, .form input[type=email]:focus, 
+.form input[type=password]:focus {
+    border: 3px solid #77B0F1;
+}
+
+.form input.valid {
+    border: 3px solid #71F765;
+}
+
+.form input.invalid {
+    border: 3px solid #F78989;
+}
+
+.form input[type=checkbox], .form input[type=radio] {
+    margin: 2px;
+} 
+
+.form textarea {
+    padding: 4px;
+    color: #000000;
+    font-size: 12px;
+    background-color: #ffffff;
+    border: 1px inset #ffffff;
+    border-radius: 0px;   
+}
+
+.form input[type=submit] {
+    color: #ffffff;
+    padding: 3px 5px;
+    margin: 5px 0;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid #77B0F1;
+    
+    background:  -moz-linear-gradient(top, #77B0F1 0%, #448CD3 100%);
+    background:  -o-linear-gradient(top, #77B0F1 0%, #448CD3 100%);
+    background:  -webkit-linear-gradient(top, #77B0F1 0%, #448CD3 100%);
+    background:  -ms-linear-gradient(top, #77B0F1 0%, #448CD3 100%);
+    background:  -khtml-linear-gradient(top, #77B0F1 0%, #448CD3 100%);
+    background:  linear-gradient(top, #77B0F1 0%, #448CD3 100%);  
+    
+
+    box-shadow: rgba(0,0,0,0.2);
+}

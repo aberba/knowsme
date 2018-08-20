@@ -1,0 +1,26 @@
+.post {
+    
+}
+
+.post .name {
+    margin: 0 0 20px 0;
+}
+
+.post .post-content {
+    margin: 10px 0;
+}
+
+.post .post-status {
+    color: #600060;
+    font-size: 14px;
+}
+
+.post .post-status .status-item {
+    padding: 3px;
+    margin: 0 5px;
+}
+
+.post .post-status .status-item:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
