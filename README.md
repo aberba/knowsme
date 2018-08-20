@@ -1,0 +1,2 @@
+# KnowsMe
+A crappy social media platform which was meant to combine best of Twitter and Facebook. This was my first project when I begun coding. Was building it in 2012 but abandoned cus...if I remember correctly... PHP couldn't do sockets easily. 
